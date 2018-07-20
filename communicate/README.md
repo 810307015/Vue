@@ -27,4 +27,8 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 组件通信的三种方法
+
+* 父组件通过v-bind绑定属性传递数据给子组件，子组件使用props属性接收。
+* 子组件通过this.$emit(eventName)发射事件，父组件通过v-on绑定该事件。
+* 通过vuex定义一个store，然后通过调用dispatch分发action来触发mutation中的方法。
